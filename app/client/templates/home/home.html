@@ -1,0 +1,17 @@
+<template name="Home">
+	<div class="container-fluid"> 
+		<div class="row">
+			<div class="col-sm-12"> 
+				{{#if currentUser}}
+					{{#if isInRole 'admin'}}
+						{{> kAdminFluid}}
+					{{else}}
+						<p>You need to be admin to view this.</p>
+					{{/if}}
+				{{ else }}
+					<p>Please login</p>
+				{{/if}}
+			</div>
+		</div>
+	</div>
+</template>
