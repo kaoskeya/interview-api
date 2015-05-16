@@ -39,7 +39,7 @@ Authorization: Bearer <token>
 
 ### Items endpoint ###
 
-/item
+POST /item
 
 #### Request ####
 
@@ -51,9 +51,7 @@ Authorization: Bearer <token>
 
 #### Response ####
 
-
 // successful response, with HTTP code 200
-
 
 // error response
 {
@@ -62,3 +60,38 @@ Authorization: Bearer <token>
 	details: <details-of-the-error-in-JSON>
 }
 
+GET /publications/items
+
+#### Response ####
+
+JSON lists of items added by the user.
+
+
+### Locations endpoint ###
+
+POST /location
+
+#### Request ####
+
+{
+	"location": {
+		"coordinates": [ 12.45, 76.43 ] 
+	}
+}
+
+#### Response ####
+
+// successful response, with HTTP code 200
+
+// error response
+{
+	error: 400
+	reason: "INVALID"
+	details: <details-of-the-error-in-JSON>
+}
+
+GET /publications/location
+
+#### Response ####
+
+Last know location added by the user.
