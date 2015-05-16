@@ -25,3 +25,4 @@ reactive-dict
 momentjs:moment
 simple:rest-accounts-password
 simple:rest
+mrt:moment-timezone
